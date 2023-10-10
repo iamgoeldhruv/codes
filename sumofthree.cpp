@@ -8,9 +8,16 @@ int main(){
     while(t--){
         int n;
         cin>>n;
-        if(n>=18 and n%3==0){
-            cout<<"YES"<<endl;
-            cout<<3<<" "<<6<<" "<<n-9<<endl
-        }
+       if(n<7 or n==9){
+        cout<<"NO"<<endl;
+        continue;
+       }
+       cout<<"YES"<<endl;
+       if(n%3==0){
+        cout<<1<<" "<<4<<" "<<n-5<<endl;
+       }
+       else{
+        cout<<1<<" "<<2<<" "<<n-3<<endl;
+       }
     }
 }
