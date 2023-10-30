@@ -7,26 +7,37 @@ int main(){
     
     while(t--){
         long long int n;
+        cin>>n;
         long long int a[n];
-        long long int c=0;
+      
         for(int i=0;i<n;i++){
             cin>>a[i];
         }
+        long long int c=0;
         long long int y=a[0];
-        for(int i=1;i<=n;i++){
-            if(a[i]>=a[i-1]){
-                continue;
-            }
-            else{
-                while(a[i+1]<a[i]){
-                    a[i+1]*=2;
-                    c++;
-                }
-                
-            }
+        long long int b=0;
+        long long int curr=0;
+        long long int ans=0;
+        for(int i=1;i<n;i++){
+            long long int z=a[i];
+            long long int y=a[i-1];
+            while(curr>0 and y<=z){
+                y*=2;
+                curr--;
 
+            }
+            while(z<y){
+                z*=2;
+                curr++;
+
+
+            }
+            ans+=curr;
+          
+            
+            
         }
-        cout<<c<<endl;
+        cout<<ans<<endl;
 
     }
 }
