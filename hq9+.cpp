@@ -13,7 +13,7 @@ int main()
             c++;
             break;
         }
-    }se
+    }
     if(c==0)
     {
         cout<<"NO";
