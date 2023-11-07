@@ -14,44 +14,43 @@ int main(){
             cout<<-1<<endl;
             continue;
         }
-       long long int a=1;
-        long long int a=1;
-       long long int b=n;
-       vector<long long int>v;
-       while(a<=n){
-        if(b>n){
-            if(s[a-1]=='1'){
-                a++;
-                b--;
+        long long int l=0;
+        long long int r=n-1;
+        vector<long long int>v;
+        while(l<r){
+            if(s[l]!=s[r]){
+                l++;
+                r--;
             }
-            else{
-                v.push_back(b);
-                b++;
-                a++;
+            else if(s[l]=='0' and s[r]=='0'){
+                s.insert(r+1,"01");
+                l++;
+                r++;
+                v.push_back(r);
             }
+            else if(s[l]=='1' and s[r]=='1'){
+                s.insert(l,"01");
+                r++;
+                l++;
+                v.push_back(l-1);
+            }
+            if(v.size()>300){
+                break;}
 
         }
-        if(b<=n){
-            if(s[a-1]=='1' and s[b-1]=='0'){
-                a++;
-                b--;
-            }
-            else if(s[a-1]=='0' and s[b-1]=='1'){
-                a++;
-                b--;
-            }
-            else if(s[a-1]=='1'){
-                c++;
-                break;
-            }
-            else if(s[a-1]=='0'){
-                v.push_back(b);
-                b++;
-            }
+        if(v.size()>300){
+            cout<<-1<<endl;
         }
-       
+        else{
+            cout<<v.size()<<endl;
+            for(int i=0;i<v.size();i++){
+                cout<<v[i]<<" ";
+            }
+            cout<<endl;
+        }
 
-       }
+        
+      
       
 
     }
