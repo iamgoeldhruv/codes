@@ -12,34 +12,25 @@ int main(){
         for(int i=0;i<n;i++){
             cin>>a[i];
         }
+        map<long long int,long long int>m;
         long long int sum=0;
+        for(int i=n-1;i>=0;i--){
+         
+            sum+=a[i];
+            m[i]=sum;
+        }
         long long int sum1=0;
-        long long int sum2=0;
-
-        
-        long long int k;
-        if(a[n-1]<0){
-            long long int i=n-1;
-            while(a[i]<=0 and i>=0){
-                sum+=a[i];
-                k=i;
-                i--;
-                
-
+        sum1+=a[0];
+        long long int c=1;
+        for(int i=1;i<n;i++){
+            if(m[i]>=0){
+                c++;
+                sum1+=a[i]*c;
             }
-            for(int i=0;i<k;i++){
-                sum1+=(i+1)*a[i];
-
+            else{
+                sum1+=a[i]*c;
             }
-            sum1+=(k)*sum;
-            cout<<sum1<<endl;
         }
-        else{
-            for(int i=0;i<n;i++){
-                sum2+=(i+1)*a[i];
-            }
-            cout<<sum2<<endl;
-        }
-        
-    }
+        cout<<sum1<<endl;
+      }
 }

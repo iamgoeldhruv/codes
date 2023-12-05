@@ -14,16 +14,17 @@ int main(){
             points+=t+l;
             days++;
             if(points<p){
-                long long int rem=p-points;
+                long double rem=p-points;
                 days+=ceil(rem/l);
                 
             }
-            cout<<n-days<<endl;
+           long long int www=n-days;
+                        cout<<www<<endl;
         }
         else{
             long long int unlocked;
             
-            long long int z=n/7;
+            long long int z=n/7;           
             if(n%7==0){
                 unlocked=z;
             }
@@ -31,9 +32,9 @@ int main(){
                 unlocked=z+1;
             }
             if(unlocked%2==0){
-            long double maxpoints=t*2+l;
+            long double maxpoints=t*2+l;                    
             long double maxpossible=maxpoints*(unlocked/2);
-            if(maxpossible>p){
+            if(maxpossible>p){                
                 days+=ceil(p/maxpoints);
             }
             else{
@@ -41,7 +42,8 @@ int main(){
                 days+=unlocked/2;
                 days+=ceil(rem/l);
             }
-            cout<<n-days<<endl;
+            long long int www=n-days;
+                        cout<<www<<endl;
             }
             else{
                 long long int zz=unlocked-1;
@@ -49,22 +51,25 @@ int main(){
                 long double maxpossible1=maxpoints1*(zz/2);
                 if(maxpossible1>=p){
                     days+=ceil(p/maxpoints1);
-                    cout<<n-days<<endl;
+                    long long int www=n-days;
+                        cout<<www<<endl;
 
                 }
                 else{
                     days+=zz/2;
-                    long double rem=p-maxpossible1;
+                    
                     maxpossible1+=t+l;
                     days++;
                     if(maxpossible1>p){
-                        cout<<n-days<<endl;
+                       long long int www=n-days;
+                        cout<<www<<endl;
 
                     }
                     else{
-                        rem=p-maxpossible1;
+                        long double rem=p-maxpossible1;
                         days+=ceil(rem/l);
-                        cout<<n-days<<endl;
+                        long long int www=n-days;
+                        cout<<www<<endl;
                     }
                 }
             }

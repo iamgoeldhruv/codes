@@ -1,6 +1,8 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 int main(){
-    long double a=10E9;
-    long long int p=a/7;
-    cout<<p<<endl;}
+    double q=8;
+    double p=ceil(q/7);
+    cout<<p;
+}
