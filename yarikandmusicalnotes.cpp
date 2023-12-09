@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int main(){
     
     long long int t;
@@ -29,7 +30,8 @@ int main(){
         long long int c=0;
         for(auto it :m){
             if(it.second>1){
-                c+=it.second-1;
+                long long int z=it.second-1;
+                c+=z*(z+1)/2;
 
             }
         }
