@@ -2,9 +2,9 @@
 using namespace std;
 
 int main(){
-    long long int t;
-    cin>>t;
-    while(t--){
+    long long int t1;
+    cin>>t1;
+    while(t1--){
         long long int a,b;
         cin>>a>>b;
         long long int x1,y1;
