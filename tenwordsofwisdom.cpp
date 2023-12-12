@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main(){
     long long int t;
     cin>>t;
@@ -11,9 +10,7 @@ int main(){
         for(int i=0;i<n;i++){
             long long int x,y;
             cin>>x>>y;
-            v.push_back({x,y});
-            
-        }
+            v.push_back({x,y});}
         long long int max=0;
         int z=0;
         for(int i=0;i<n;i++){
@@ -21,9 +18,6 @@ int main(){
                 if(v[i].second>max){
                     max=v[i].second;
                     z=i+1;
-                }
-            }
-        }
+                }}}
         cout<<z<<endl;
-    }
-}
+    }}
