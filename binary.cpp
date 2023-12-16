@@ -1,28 +1,51 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 int main(){
-    long long int t;
+    int t,d,e,f;
     cin>>t;
     while(t--){
-        int n;
-        cin>>n;
-        string s;
-        cin>>s;
-        int one=0;
-        int zero=0;
-        for(int i=0;i<n;i++){
-            if(s[i]=='1'){
-                one++;
+        int x;
+        cin>>x;
+        int c=0;
+        for(int i=1;i<=x;i++){
+            if(i%3!=0){
+                d=i;
+                for(int j=1;j<=(x-d);j++){
+                    if(j%3!=0 && j!=d){
+                        e=j;
+                        for(int k=1;k<=(x-d-e); k++){
+                            if(k%3!=0 && k!=d && k!=e){
+                                f=k;
+                                if(d+e+f==x){
+                                cout<<"yes"<<endl;
+                                cout<<d<<" "<<e<<" "<<f<<endl;
+                                c=1;}
+
+                                
+                            }
+                            if(c==1){
+                                break;
+                            }
+                            
+                        }
+                        
+                    }
+                    if(c==1){
+                            break;
+                        }
+                   
+                    
+                }
+
+                
             }
-            else{
-                zero++;
-            }
+            if(c==1){
+                            break;
+                        }
+           
         }
-        if(one<n){
-            cout<<"YES"<<endl;
-        }
-        else{
-            cout<<"NO"<<endl;
+        if(c==0){
+            cout<<"no"<<endl;
         }
     }
 }
