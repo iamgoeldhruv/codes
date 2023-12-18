@@ -1,11 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    
     long long int t;
     cin>>t;
-    
-    
     while(t--){
         long long int n;
         cin>>n;
@@ -16,7 +13,6 @@ int main(){
             cin>>x>>y;
             m[x]++;
             m[y]++;
-           
         }
         if(n==2){
             cout<<1<<endl;
@@ -27,9 +23,7 @@ int main(){
             if(m[i]==1){
                 count++;
             }
-
         }
         cout<<(count+1)/2<<endl;
-        
     }
 }
