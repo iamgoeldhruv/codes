@@ -12,11 +12,6 @@ int main(){
         long long int c=0;
         int d=0;
         sort(a.begin(),a.end());
-        // for(int i=0;i<n-1;i++){
-        //     if(s[i]>s[i+1]){
-        //         c++;
-        //     }
-        // }
         for(int i=0;i<n-1;i++){
             if(s[i]!=a[i]){
                 if(s[i]>s[i+1]){

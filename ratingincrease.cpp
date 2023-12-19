@@ -26,29 +26,19 @@ int main(){
         for(int i=z;i<s.length();i++){
             a+=s[i];
         }
-        if(a.size()>b.size()){
-             cout<<b<<" "<<a<<endl;
-             continue;
-
+        
+        if(a==""){
+            cout<<-1<<endl;
+            continue;
         }
-        int c=0;
-        if(a.size()==b.size()){
-            for(int i=0;i<a.size();i++){
-                if(a[i]>b[i]){
-                    c++;
-                    break;
-                }
-                if(a[i]<b[i]){
-                    break;
-                }
-            }
+        long long int aa=stoi(a);
+        long long int bb=stoi(b);
+        if(aa>bb){
+            cout<<bb<<" "<<aa<<endl;
         }
-        if(c>0){
-             cout<<b<<" "<<a<<endl;
-             continue;
-
+        else{
+            cout<<-1<<endl;
         }
-        cout<<-1<<endl;
 
        
     }
