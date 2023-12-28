@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main()
-{
-    cout<<"hello world";
-    return 0;
+{long long int a=10E17;
+cout<<a;
+
 }

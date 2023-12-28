@@ -1,8 +1,8 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int c=5;
-    cout<<(-1)*c;
-    return 0;
+    long long int x=1<<29;
+    cout<<x<<endl;
+
 }
